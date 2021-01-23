@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#53B557"
+
+    tools:context=".SignIn">
+
+    <EditText
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="username"
+        android:padding="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColorHint="#fff"
+        android:backgroundTint="#fff"/>
+
+    <EditText
+        android:id="@+id/pass"
+        android:textColorHint="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="password"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="#fff"/>
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        android:layout_below="@+id/pass"
+        android:background="@drawable/btnbg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/noAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="no account yet? create one"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:layout_below="@+id/signin"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:onClick="register"/>
+
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_below="@+id/noAccount"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/line"
+            android:drawableRight="@drawable/line"
+            android:text="   or"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/line"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btnbg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/facebook"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textSize="18dp"
+            android:text="SIGN IN WITH FACEBOOK"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/facebook"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btnbg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/google"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textSize="18dp"
+            android:text="   SIGN IN WITH GOOGLE"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
